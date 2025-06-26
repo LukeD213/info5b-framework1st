@@ -1,11 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import styles from '../../styles/Menu.module.css';
 
 export default function Menu() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" data-bs-theme="dark" className={`${styles.menudegrade} fs-6`}>
       <Container>
         <Navbar.Brand href="/">Info-B</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,6 +23,11 @@ export default function Menu() {
             </NavDropdown>
             <NavDropdown title="Noticias" id="noticias">
               <NavDropdown.Item href="/cadastros/cadnoticia">Cadastro Notícias</NavDropdown.Item>
+            </NavDropdown>
+            <NavDropdown title="Função Next" id="fncnext">
+              <NavDropdown.Item href="/funcaonext/gssp">GetServerSideProps</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gssp2">GetServerSideProps-2</NavDropdown.Item>
+              <NavDropdown.Item href="/funcaonext/gsspcard">GetServerSideProps-Card</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

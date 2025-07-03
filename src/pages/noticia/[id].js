@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import { Container } from 'react-bootstrap'
-import Cards from '../components/cards';
 export async function getServerSideProps(req) {
     console.log(req.query);
   // Fetch data from external API
@@ -18,7 +17,8 @@ export default function Page({noticia}) {
                 conteudonoticia={noticia.conteudonoticia}
                 titulonoticia={noticia.titulonoticia}
                 datahoracadastro={noticia.datahoracadastro}
-                tiponoticia={noticia.tiponoticia} />
+                tiponoticia={noticia.tiponoticia} 
+                />
         </Container>
     </>
 }

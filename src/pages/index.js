@@ -1,6 +1,5 @@
 import { Container, Row } from 'react-bootstrap';
 import Cards from './components/cards';
-
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch('http://localhost:3000/api/noticias/apinoticias');
@@ -9,7 +8,6 @@ export async function getServerSideProps() {
   // Pass data to the page via props
   return { props: { repo } };
 }
-
 export default function Home() {
   return <>
     <Container>

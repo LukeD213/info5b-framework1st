@@ -1,12 +1,11 @@
-import { Container, Row } from 'react-bootstrap';
-import Cards from './components/cards';
+import { Container, Row } from "react-bootstrap";
+import Cards from "./components/cards";
 export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch('http://localhost:3000/api/noticias/apinoticias');
-  const repo = await res.json();
-
+  // Fetch data from  API notícias
+  const res = await fetch('http://localhost:3000/api/noticias/apinoticias')
+  const repo = await res.json()
   // Pass data to the page via props
-  return { props: { repo } };
+  return { props: { noticias: repo } }
 }
 export default function Home({ noticias }) {
   return <>
